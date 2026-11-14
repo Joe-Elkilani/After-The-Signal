@@ -15,7 +15,7 @@ import { ArtifactGrid } from '../../../shared/components/artifact-grid/artifact-
   templateUrl: './home.html',
 })
 export class Home {
-  private service = inject(ArtifactService);
+  protected artifacts = inject(ArtifactService);
   protected filter = inject(Filter);
 
   protected readonly filters: { mode: FilterMode; key: string; showCount: boolean }[] = [
@@ -26,11 +26,11 @@ export class Home {
   ];
 
   protected readonly visible = computed(() =>
-    this.service.artifacts().filter(FILTER_RULES[this.filter.mode()]),
+    this.artifacts.artifacts().filter(FILTER_RULES[this.filter.mode()]),
   );
 
   protected count(mode: FilterMode): number {
-    return this.service.artifacts().filter(FILTER_RULES[mode]).length;
+    return this.artifacts.artifacts().filter(FILTER_RULES[mode]).length;
   }
 
   ngOnInit(): void {
@@ -40,6 +40,5 @@ export class Home {
   protected toggleAll(): void {
     this.filter.mode.set(this.filter.mode() === 'all' ? 'featured' : 'all');
   }
-  protected artifacts = inject(ArtifactService);
   protected modal = inject(Model);
 }

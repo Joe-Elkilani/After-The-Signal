@@ -3,7 +3,6 @@ import {
   ApplicationConfig,
   inject,
   provideBrowserGlobalErrorListeners,
-  provideZoneChangeDetection,
   provideZonelessChangeDetection,
 } from '@angular/core';
 import { provideRouter, withInMemoryScrolling, withRouterConfig } from '@angular/router';
