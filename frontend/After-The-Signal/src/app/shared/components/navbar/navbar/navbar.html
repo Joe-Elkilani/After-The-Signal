@@ -98,7 +98,7 @@
                       'nav.artifactsCount' | t
                     }}</span>
                   </a>
-                  <ul class="space-y-2">
+                  <ul class="space-y-2 list-none">
                     @for (a of artifacts.moon(); track a.id) {
                       <li>
                         <button type="button" class="menu-item" (click)="modal.open(a.id)">
@@ -159,13 +159,13 @@
     </nav>
 
     <div class="hidden lg:flex items-center gap-3.5">
-      <app-lang-menu />
-      <app-age-menu />
-      <app-theme-toggle size="sm" />
+      <app-lang-menu></app-lang-menu>
+      <app-age-menu></app-age-menu>
+      <app-theme-toggle size="sm"></app-theme-toggle>
     </div>
 
     <div class="lg:hidden flex items-center gap-2">
-      <app-theme-toggle size="md" />
+      <app-theme-toggle size="md"></app-theme-toggle>
       <button
         type="button"
         id="mobile-menu-btn"
