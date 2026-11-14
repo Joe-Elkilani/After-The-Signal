@@ -1,8 +1,9 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Navbar } from './shared/components/navbar/navbar/navbar';
 import { Footer } from './shared/components/footer/footer/footer';
 import { AiAssistant } from './features/ai-assistant/ai-assistant/ai-assistant';
+import { ThemeService } from './core/services/theme-service';
 
 @Component({
   selector: 'app-root',
@@ -11,5 +12,5 @@ import { AiAssistant } from './features/ai-assistant/ai-assistant/ai-assistant';
   styleUrl: './app.css',
 })
 export class App {
-  protected readonly title = signal('After-The-Signal');
+  private theme = inject(ThemeService);
 }

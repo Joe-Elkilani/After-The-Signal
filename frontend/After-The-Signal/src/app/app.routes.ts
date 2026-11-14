@@ -3,7 +3,7 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    title: 'Home | After The Signal',
+    title: 'AFTER THE SIGNAL — Every Explorer Has a Story. Every Signal Leaves a Legacy.',
     loadComponent: () => import('./features/home/home/home').then((m) => m.Home),
   },
   {
