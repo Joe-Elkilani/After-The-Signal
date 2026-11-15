@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { TranslatePipe } from '../../../pipes/t.pipe';
-import { AGE_MODES, AgeModelService } from '../../../../core/services/age-model-service';
+import { AGE_MODES, AgeModeService } from '../../../../core/services/age-model-service';
 import { Popover } from '../../../../core/services/popover';
 
 @Component({
@@ -10,7 +10,7 @@ import { Popover } from '../../../../core/services/popover';
   templateUrl: './age-menu.html',
 })
 export class AgeMenu {
-  protected age = inject(AgeModelService);
+  protected age = inject(AgeModeService);
   protected popover = inject(Popover);
   protected readonly modes = AGE_MODES;
 

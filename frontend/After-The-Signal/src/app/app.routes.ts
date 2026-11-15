@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { AgeSelection } from './features/age-selection/age-selection';
 
 export const routes: Routes = [
   {
@@ -17,6 +18,10 @@ export const routes: Routes = [
     title: 'Explore Mars | After The Signal',
     loadComponent: () => import('./features/explore/explore/explore').then((m) => m.Explore),
     data: { world: 'mars' },
+  },
+  {
+    path: 'age-selection',
+    component: AgeSelection,
   },
   {
     path: 'archive',
