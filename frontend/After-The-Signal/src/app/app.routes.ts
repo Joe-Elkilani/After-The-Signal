@@ -19,6 +19,11 @@ export const routes: Routes = [
     data: { world: 'mars' },
   },
   {
+    path: 'archive',
+    title: 'Archive | After The Signal',
+    loadComponent: () => import('./features/archive/archive').then((m) => m.Archive),
+  },
+  {
     path: 'artifact/:id',
     title: 'Artifact Story | After The Signal',
     loadComponent: () =>
