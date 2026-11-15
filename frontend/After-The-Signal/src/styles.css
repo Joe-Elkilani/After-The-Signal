@@ -6,6 +6,23 @@
 @import './app/styles/rtl.css';
 @import './app/styles/theme.css';
 
+/* Tailwind v4: بيعرّف الـ utilities (bg-space-main, text-space-cyan, font-display, max-w-container ...) */
+@theme inline {
+  --color-space-main: rgb(var(--rgb-main));
+  --color-space-secondary: rgb(var(--rgb-secondary));
+  --color-space-card: rgb(var(--rgb-card));
+  --color-space-cyan: rgb(var(--rgb-cyan));
+  --color-space-mars: rgb(var(--rgb-mars));
+  --color-space-textMain: rgb(var(--rgb-text));
+  --color-space-textMuted: rgb(var(--rgb-muted));
+  --color-space-onAccent: rgb(var(--rgb-on-accent));
+
+  --font-display: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --container-container: 1440px;
+}
+
 /* ========================================
    AFTER THE SIGNAL - Global Design System
 ======================================== */
@@ -45,7 +62,7 @@ body {
   min-height: 100vh;
   background-color: var(--color-space-navy);
   color: var(--color-text-primary);
-  font-family: 'Inter', 'sans-serif';
+  font-family: 'Inter', sans-serif;
   line-height: 1.6;
 }
 
@@ -147,4 +164,40 @@ app-artifact-modal {
 .waveform-bg {
   background-image: radial-gradient(circle, rgba(53, 213, 232, 0.15) 1px, transparent 1px);
   background-size: 20px 20px;
+}
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes page-exit {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+::view-transition-old(root) {
+  animation: 150ms ease-out both page-exit;
+}
+
+::view-transition-new(root) {
+  animation: 250ms ease-out both page-enter;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
 }

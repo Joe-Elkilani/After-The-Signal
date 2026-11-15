@@ -1,4 +1,4 @@
-import { Component, inject, Input } from '@angular/core';
+import { Component, computed, inject, Input } from '@angular/core';
 import { TranslatePipe } from '../../../pipes/t.pipe';
 import { ThemeService } from '../../../../core/services/theme-service';
 
@@ -10,5 +10,6 @@ import { ThemeService } from '../../../../core/services/theme-service';
 })
 export class ThemeToggle {
   protected theme = inject(ThemeService);
+  protected readonly isDark = computed(() => this.theme.theme() === 'dark');
   @Input() size: 'sm' | 'md' = 'sm';
 }

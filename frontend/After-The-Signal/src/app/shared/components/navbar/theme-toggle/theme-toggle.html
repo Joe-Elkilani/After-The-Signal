@@ -1,34 +1,19 @@
 <button
   type="button"
-  class="theme-toggle rounded-lg border border-subtle hover:border-space-cyan/50 flex items-center justify-center text-space-cyan transition-colors"
-  [class]="size === 'sm' ? 'w-9 h-9 bg-space-card/90' : 'w-10 h-10 bg-space-card'"
+  class="theme-toggle"
+  [class.is-dark]="isDark()"
+  [attr.data-size]="size"
   [attr.title]="'theme.toggle' | t"
   [attr.aria-label]="'theme.toggle' | t"
+  [attr.aria-pressed]="isDark()"
   (click)="theme.toggle()"
 >
-  <svg
-    class="icon-to-light w-4 h-4"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="1.8"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  >
-    <circle cx="12" cy="12" r="4"></circle>
-    <path
-      d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"
-    ></path>
-  </svg>
-  <svg
-    class="icon-to-dark w-4 h-4"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="1.8"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  >
-    <path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z" />
-  </svg>
+  <span class="cloud cloud-one" aria-hidden="true">☁️</span>
+  <span class="cloud cloud-two" aria-hidden="true">☁️</span>
+  <span class="stars" aria-hidden="true">✦ ✧ ✦ ✧</span>
+
+  <span class="toggle-circle" aria-hidden="true">
+    <span class="sun-icon">☀️</span>
+    <span class="moon-icon">🌙</span>
+  </span>
 </button>
