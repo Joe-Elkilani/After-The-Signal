@@ -4,6 +4,7 @@ import { TranslatePipe } from '../../pipes/t.pipe';
 import { ImgFallbackDirective } from '../../directives/img-fallback.directive';
 import { Model } from '../../../core/services/model';
 import { accentOf } from '../../../core/services/utils';
+import { Router } from '@angular/router';
 
 @Component({
   imports: [NgClass, TranslatePipe, ImgFallbackDirective],
@@ -12,6 +13,7 @@ import { accentOf } from '../../../core/services/utils';
   templateUrl: './artifact-modal.html',
 })
 export class ArtifactModal {
+  private readonly router = inject(Router);
   protected modal = inject(Model);
   protected accentOf = accentOf;
 
@@ -39,6 +41,14 @@ export class ArtifactModal {
   @HostListener('document:keydown.escape')
   protected close(): void {
     this.modal.close();
+  }
+  protected openFullStory(): void {
+    const artifact = this.modal.artifact();
+
+    if (!artifact) return;
+
+    this.modal.close();
+    void this.router.navigate(['/artifact', artifact.id]);
   }
 
   protected onBackdrop(event: MouseEvent): void {

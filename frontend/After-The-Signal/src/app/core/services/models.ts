@@ -6,6 +6,16 @@ export type AgeMode = 'cadet' | 'all' | 'telemetry';
 export type FilterMode = 'featured' | 'all' | World;
 export type Dictionary = Record<string, string>;
 
+export type TimelineEventType =
+  'launch' | 'landing' | 'deployment' | 'discovery' | 'milestone' | 'communication' | 'end';
+export interface TimelineEvent {
+  id: string;
+  date: string;
+  title: string;
+  description: string;
+  type: TimelineEventType;
+}
+
 export interface Artifact {
   id: string;
   world: World;
@@ -25,6 +35,7 @@ export interface Artifact {
   discoveries: string;
   ending: string;
   legacy: string;
+  timeline: TimelineEvent[];
   source?: string;
 }
 

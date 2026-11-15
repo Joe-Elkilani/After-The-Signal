@@ -83,8 +83,7 @@
               <div class="grid grid-cols-2 gap-6">
                 <div class="accent-cyan">
                   <a
-                    routerLink="/"
-                    fragment="choose-world"
+                    routerLink="/explore/moon"
                     class="flex items-center justify-between pb-2.5 mb-3 border-b border-subtle group"
                   >
                     <div class="flex items-center gap-2">
@@ -116,8 +115,7 @@
 
                 <div class="accent-mars">
                   <a
-                    routerLink="/"
-                    fragment="choose-world"
+                    routerLink="/explore/moon"
                     class="flex items-center justify-between pb-2.5 mb-3 border-b border-subtle group"
                   >
                     <div class="flex items-center gap-2">
@@ -155,9 +153,7 @@
       <a routerLink="/archive" class="nav-link" routerLinkActive="is-active">{{
         'nav.archive' | t
       }}</a>
-      <a routerLink="/about" fragment="what-was-left" fragment="what-was-left" class="nav-link">{{
-        'nav.about' | t
-      }}</a>
+      <a routerLink="/about" fragment="what-was-left" class="nav-link">{{ 'nav.about' | t }}</a>
     </nav>
 
     <div class="hidden lg:flex items-center gap-3.5">
@@ -215,12 +211,13 @@
           >{{ 'nav.archive' | t }}</a
         >
         <a
-          routerLink="/"
+          routerLink="/about"
           fragment="what-was-left"
           (click)="mobileOpen.set(false)"
           class="mobile-link text-space-textMain hover:text-space-cyan py-1"
-          >{{ 'nav.aboutProject' | t }}</a
         >
+          {{ 'nav.aboutProject' | t }}
+        </a>
 
         <div
           class="pt-4 border-t border-subtle flex items-center justify-between font-mono text-xs normal-case tracking-normal font-normal"

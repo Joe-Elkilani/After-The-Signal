@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { computed, inject, Injectable, Service, signal } from '@angular/core';
+import { computed, inject, Service, signal } from '@angular/core';
 
 import { catchError, firstValueFrom, from, of, switchMap, tap } from 'rxjs';
 
@@ -64,10 +64,27 @@ export class ArtifactService {
         this.http.get<Overrides>(`data/i18n/artifacts.${lang}.json`),
       );
 
-      return artifacts.map((a) => ({
-        ...a,
-        ...overrides[a.id],
-      }));
+      return artifacts.map((artifact) => {
+        const override = overrides[artifact.id];
+
+        if (!override) return artifact;
+
+        const translatedTimeline = override.timeline;
+
+        return {
+          ...artifact,
+          ...override,
+
+          timeline: artifact.timeline.map((event) => {
+            const translatedEvent = translatedTimeline?.find((item) => item.id === event.id);
+
+            return {
+              ...event,
+              ...translatedEvent,
+            };
+          }),
+        };
+      });
     } catch {
       return artifacts;
     }
