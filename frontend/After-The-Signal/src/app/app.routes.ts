@@ -1,7 +1,4 @@
 import { Routes } from '@angular/router';
-import { AgeSelection } from './features/age-selection/age-selection';
-import { inject } from '@angular/core';
-import { ArtifactService } from './core/services/artifact-service';
 
 export const routes: Routes = [
   {
@@ -22,18 +19,17 @@ export const routes: Routes = [
     data: { world: 'mars' },
   },
   {
-    path: 'age-selection',
-    component: AgeSelection,
-  },
-  {
     path: 'archive',
     title: 'Archive | After The Signal',
     loadComponent: () => import('./features/archive/archive').then((m) => m.Archive),
   },
   {
     path: 'artifact/:id',
-    title: 'Artifact | After The Signal',
-    loadComponent: () => import('./features/archive/archive').then((m) => m.Archive),
+    title: 'Artifact Story | After The Signal',
+    loadComponent: () =>
+      import('./features/artifact-story/artifact-story/artifact-story').then(
+        (m) => m.ArtifactStory,
+      ),
   },
   {
     path: 'about',
