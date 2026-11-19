@@ -154,7 +154,7 @@ Built in 3 days by a team of 5 during NASA Space Apps Challenge 2026.
 | [**Hammad Amr**](https://github.com/hammadhammadamr-create) | Frontend |
 | [**Yassin Ibrahim**](https://github.com/yassinbrakallaa-debug) | Frontend |
 | [**Mohamed Bassem**](https://github.com/Mohammed710333) | Backend (.NET) |
-| [**Marwan Mohamed**](...) | AI |
+| [**Marwan Mohamed**]| AI |
 
 ---
 
