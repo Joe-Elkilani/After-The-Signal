@@ -134,7 +134,16 @@ The app is deployed on **Vercel** with these settings:
 Every push to `main` triggers a new production deployment automatically.
 
 ---
+## 🚧 Future Improvements
 
+- 🛰️ Add more artifacts from the Moon, Mars and deep space, such as rovers, landers and probes
+- 🌍 Support more languages (Arabic first) to reach more learners
+- 🤖 Ground the AI Assistant in official NASA mission data for more accurate answers
+- 🎚️ Expand the audience modes with content tailored to kids, students and enthusiasts
+- 🔊 Add audio narration and interactive timelines for each artifact story
+- ♿ Improve accessibility (keyboard navigation, screen-reader support)
+
+---
 ## 👥 Team
 
 Built in 3 days by a team of 5 during NASA Space Apps Challenge 2026.
