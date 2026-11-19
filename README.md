@@ -51,8 +51,6 @@ This project was built for the **NASA Space Apps Challenge 2026** (challenge: *t
 - 🎚️ **Audience modes**: content adapted for different ages (*Mode: All Ages*)
 - 📱 Responsive design for desktop, tablet and mobile
 
-> Update this list to match what is actually shipped in your final version.
-
 ---
 
 ## 🛠️ Tech Stack
@@ -160,4 +158,4 @@ Built in 3 days by a team of 5 during NASA Space Apps Challenge 2026.
 
 ## 📄 License
 
-This project is licensed under the MIT License. Add a `LICENSE` file if you want to publish it under this license.
+This project is licensed under the MIT License.
