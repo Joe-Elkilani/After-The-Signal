@@ -143,13 +143,11 @@ Built in 3 days by a team of 5 during NASA Space Apps Challenge 2026.
 
 | Name | Role |
 | ---- | ---- |
-| **Yousef Elkilani** | Team Lead, Angular Frontend |
-| _Hammad Amr_ | Frontend |
-| _Yassin Ibrahim_ | Frontend |
-| _Mohamed Bassem_ | Backend (.NET) |
-| _Marwan Mohamed_ | AI |
-
-> Replace the placeholder names and add GitHub profile links.
+| [**Yousef Ahmed**](https://github.com/Joe-Elkilani) | Angular Frontend |
+| [**Hammad Amr**](https://github.com/hammadhammadamr-create) | Frontend |
+| [**Yassin Ibrahim**](https://github.com/yassinbrakallaa-debug) | Frontend |
+| [**Mohamed Bassem**](https://github.com/Mohammed710333) | Backend (.NET) |
+| [**Marwan Mohamed**](...) | AI |
 
 ---
 
