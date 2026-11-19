@@ -19,9 +19,14 @@ An interactive space-heritage experience that tells the stories of the machines 
 
 ## 📸 Preview
 
-> Add a screenshot or GIF of the app here, e.g. `docs/preview.png`
->
-> `![After The Signal preview](docs/preview.png)`
+### Home
+![Home page](docs/screenshots/home.png)
+
+### Artifact Story
+![Artifact story page](docs/screenshots/artifact-story.png)
+
+### AI Assistant
+![AI Assistant](docs/screenshots/ai-assistant.png)
 
 ---
 
